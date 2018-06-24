@@ -1,12 +1,18 @@
 {
-    "eslint.packageManager": "yarn",
-    "prettier.printWidth": 160,
-    "prettier.singleQuote": true,
-    "prettier.tabWidth": 4,
-    "eslint.autoFixOnSave": true,
-    "files.exclude": {
-        "**/node_modules": true,
-        "**/~awsmobilejs*": true,
-        "**/awsmobilejs": true,
-    },
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+  "editor.formatOnSave": false,
+  "editor.tabCompletion": true,
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/.git": true,
+    "**/~awsmobilejs*": true
+  },
+  "prettier.printWidth": 100,
+  "prettier.singleQuote": true,
+  "prettier.bracketSpacing": true,
+  "prettier.jsxBracketSameLine": false,
+  "prettier.semi": true,
+  "prettier.trailingComma": "all",
+  "tslint.packageManager": "yarn"
 }

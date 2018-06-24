@@ -1,0 +1,14 @@
+1. Login
+2a. FTU
+    i. ask for maxes of 4 lifts
+    ii. button to submit
+2b. Existing User
+    i. http://prntscr.com/jynon0 - possible inspiration
+    ii. 4 icon-tabs at top of screen to switch between lifts
+    iii. 2nd row of sub tabs for week 1,2,3, deload?
+        a. these have checkmark when completed
+        b. default selection is current unfinished week
+    iv. show weight and reps for 3 warm up sets and 2 work sets
+    v. show weight but have input field for final work set reps
+    vi. show weight but have input field for burnout set reps
+    vii. save on change of either input field
