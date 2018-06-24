@@ -3,20 +3,20 @@ import { StyleSheet, View } from 'react-native';
 import { GoogleLoginButton } from 'google-login-button';
 
 export default class App extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <GoogleLoginButton />
-      </View>
-    );
-  }
+    render() {
+        return (
+            <View style={styles.container}>
+                <GoogleLoginButton />
+            </View>
+        );
+    }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+    container: {
+        flex: 1,
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center'
+    }
 });
