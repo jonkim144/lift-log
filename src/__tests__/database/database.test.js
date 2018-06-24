@@ -1,4 +1,4 @@
-import { Database } from '../../database';
+import { Database } from 'database';
 import { DynamoDB } from 'aws-sdk';
 
 jest.mock('aws-amplify', () => ({ configure: jest.fn() }));

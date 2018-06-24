@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { GoogleLoginButton } from '../../google-login-button';
+import { GoogleLoginButton } from 'google-login-button';
 
 jest.mock('aws-amplify', () => ({ configure: jest.fn() }));
 

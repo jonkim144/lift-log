@@ -2,7 +2,7 @@ import React from 'react';
 import Expo from 'expo';
 import { Auth } from 'aws-amplify';
 import { Button, Text, View } from 'react-native';
-import { Database } from '../database';
+import { Database } from 'database';
 
 class GoogleLoginButton extends React.Component {
   constructor(props) {
