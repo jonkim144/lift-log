@@ -1,1 +1,1 @@
-export * from './MaxCalculator';
+export { MaxCalculator } from './MaxCalculator';

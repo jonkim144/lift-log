@@ -1,22 +1,28 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import { FirstTimeUser, GoogleLoginButton } from 'views';
+import { ExistingUser, FirstTimeUser, GoogleLoginButton } from 'views';
 
-export default class App extends React.Component<{}, { loggedIn: boolean }> {
+export default class App extends React.Component<{}, { isFirstTimeUser: boolean; loggedIn: boolean }> {
     constructor(props: {}) {
         super(props);
         this.state = {
+            isFirstTimeUser: false,
             loggedIn: false,
         };
         this.handleLoggedIn = this.handleLoggedIn.bind(this);
     }
 
-    public handleLoggedIn() {
-        this.setState({ loggedIn: true });
+    public handleLoggedIn(isFirstTimeUser: boolean) {
+        this.setState({ loggedIn: true, isFirstTimeUser });
     }
 
     public render() {
-        return <View style={styles.container}>{this.state.loggedIn ? <FirstTimeUser /> : <GoogleLoginButton onLoggedIn={this.handleLoggedIn} />}</View>;
+        const { isFirstTimeUser, loggedIn } = this.state;
+        return (
+            <View style={styles.container}>
+                {!loggedIn ? <GoogleLoginButton onLoggedIn={this.handleLoggedIn} /> : isFirstTimeUser ? <FirstTimeUser /> : <ExistingUser />}
+            </View>
+        );
     }
 }
 

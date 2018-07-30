@@ -7,7 +7,7 @@ import { View } from 'react-native';
 import { Button, Text } from 'react-native-elements';
 
 interface IProps {
-    onLoggedIn: () => void;
+    onLoggedIn: (isFirstTimeUser: boolean) => void;
 }
 interface IState {
     status: string;
@@ -62,12 +62,12 @@ export class GoogleLoginButton extends React.Component<IProps, IState> {
                         return;
                     }
                     this.setState({ status: `Successfully added user! ${JSON.stringify(addedData)}` });
-                    this.props.onLoggedIn();
+                    this.props.onLoggedIn(true);
                 });
                 return;
             }
             this.setState({ status: `Data retreived: ${JSON.stringify(data)}` });
-            this.props.onLoggedIn();
+            this.props.onLoggedIn(false);
         });
     }
 

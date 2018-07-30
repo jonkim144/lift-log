@@ -1,1 +1,1 @@
-export * from './GoogleLoginButton';
+export { GoogleLoginButton } from './GoogleLoginButton';
