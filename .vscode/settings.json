@@ -8,11 +8,6 @@
     "**/.git": true,
     "**/~awsmobilejs*": true
   },
-  "prettier.printWidth": 100,
-  "prettier.singleQuote": true,
-  "prettier.bracketSpacing": true,
-  "prettier.jsxBracketSameLine": false,
-  "prettier.semi": true,
-  "prettier.trailingComma": "all",
-  "tslint.packageManager": "yarn"
+  "tslint.packageManager": "yarn",
+  "tslint.autoFixOnSave": true,
 }

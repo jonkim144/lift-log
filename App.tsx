@@ -1,22 +1,30 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import { GoogleLoginButton } from 'views';
+import { FirstTimeUser, GoogleLoginButton } from 'views';
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <GoogleLoginButton />
-      </View>
-    );
-  }
+export default class App extends React.Component<{}, { loggedIn: boolean }> {
+    constructor(props: {}) {
+        super(props);
+        this.state = {
+            loggedIn: false,
+        };
+        this.handleLoggedIn = this.handleLoggedIn.bind(this);
+    }
+
+    public handleLoggedIn() {
+        this.setState({ loggedIn: true });
+    }
+
+    public render() {
+        return <View style={styles.container}>{this.state.loggedIn ? <FirstTimeUser /> : <GoogleLoginButton onLoggedIn={this.handleLoggedIn} />}</View>;
+    }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+    container: {
+        alignItems: 'center',
+        backgroundColor: 'black',
+        flex: 1,
+        justifyContent: 'center',
+    },
 });
